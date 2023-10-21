@@ -47,28 +47,26 @@ void suprimirCola(int& n) {
 void setup() {
   Serial.begin(9600);
   while (!Serial) {
-    // Espera a que la comunicación serial esté disponible.
   }
 
   int dato;
 
   Serial.print("Digite un número: ");
   while (!Serial.available()) {
-    // Espera a que el usuario ingrese datos por el puerto serie.
+  
   }
   dato = Serial.parseInt();
   insertarCola(dato);
 
   Serial.print("Digite un número: ");
   while (!Serial.available()) {
-    // Espera a que el usuario ingrese datos por el puerto serie.
   }
   dato = Serial.parseInt();
   insertarCola(dato);
 
   Serial.print("Digite un número: ");
   while (!Serial.available()) {
-    // Espera a que el usuario ingrese datos por el puerto serie.
+  
   }
   dato = Serial.parseInt();
   insertarCola(dato);
@@ -88,5 +86,5 @@ void setup() {
 }
 
 void loop() {
-  // Tu código de loop, si es necesario.
+  
 }
