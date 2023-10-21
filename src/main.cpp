@@ -8,6 +8,9 @@ struct Nodo {
 Nodo* frente = NULL;
 Nodo* fin = NULL;
 
+bool cola_vacia() {
+  return (frente == NULL);
+}
 
 void insertarCola(int n) {
   Nodo* nuevo_nodo = new Nodo();
@@ -27,10 +30,6 @@ void insertarCola(int n) {
   Serial.println(" insertado a la cola correctamente");
 }
 
-bool cola_vacia() {
-  return (frente == NULL);
-}
-
 void suprimirCola(int& n) {
   n = frente->dato;
   Nodo* aux = frente;
@@ -46,7 +45,7 @@ void suprimirCola(int& n) {
 }
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   while (!Serial) {
     // Espera a que la comunicación serial esté disponible.
   }
@@ -89,5 +88,5 @@ void setup() {
 }
 
 void loop() {
-  
+  // Tu código de loop, si es necesario.
 }
